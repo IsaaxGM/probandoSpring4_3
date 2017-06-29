@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Hola</title>
+</head>
+<body>
+	<h1>Insertando datos simples:</h1>
+	<h2>Hola <span th:text="${name}"></span> ejemplo!!</h2>
+	<h3 th:text="${ver}"></h3>
+		
+	<hr/>	
+	<h1>Insertando datos complejos:</h1>
+	<h2>Hola <span th:text="${person.name}"></span></h2>
+	<h2>Tu edad es <span th:text="${person.age}"></span></h2>
+	
+	<hr/>
+	<table>
+		<thead>
+			<tr>
+				<th>NAME</th>
+				<th>AGE</th>
+			</tr>
+		</thead>
+		<tbody th:each="person : ${people}">
+			<tr>
+				<th th:text="${person.name}"></th>
+				<th th:text="${person.age}"></th>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
